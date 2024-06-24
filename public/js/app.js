@@ -82,7 +82,7 @@ $(document).ready(function() {
 
                 // Simulación de la sincronización con una base de datos online
                 $.ajax({
-                    url: 'http://api_form.test:8080/api/sync', // URL de la API de sincronización
+                    url: window.location+'api/sync', // URL de la API de sincronización
                     method: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify(cachedData),
@@ -119,7 +119,7 @@ $(document).ready(function() {
         });
         
         $.ajax({
-            url: 'http://api_form.test:8080/api/generate-excel', // URL de la API para generar el Excel
+            url: window.location+'api/generate-excel', // URL de la API para generar el Excel
             method: 'GET',
             xhrFields: {
                 responseType: 'blob'
